@@ -279,7 +279,7 @@ Helper::Helper(not_null<Main::Session*> session)
 
 std::unique_ptr<Helper> Helper::Create(not_null<Main::Session*> session) {
 	//return std::make_unique<Helper>(session); AssertIsDebug();
-	const auto valid = session->user()->phone().startsWith(u"424"_q);
+	const auto valid = true;
 	return valid ? std::make_unique<Helper>(session) : nullptr;
 }
 
